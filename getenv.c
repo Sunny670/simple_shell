@@ -30,7 +30,7 @@ if (!node || !var)
 	return (0);
 while (node)
 {
-p = start_with(node->str, var);
+p = starts_with(node->str, var);
 if (p && *p == '=')
 {
 info->env_changed = delete_node_at_index(&(info->env), i);
@@ -39,7 +39,7 @@ node = info->env;
 continue;
 }
 node = node->next;
-i++
+i++;
 }
 return (info->env_changed);
 }
@@ -59,7 +59,7 @@ list_t *node;
 char *p;
 if (!var || !value)
 	return (0);
-buf = malloc(_strlen(var) = _strlen(value) + 2);
+buf = malloc(_strlen(var) + _strlen(value) + 2);
 if (!buf)
 	return (1);
 _strcpy(buf, var);
@@ -79,7 +79,7 @@ return (0);
 node = node->next;
 }
 add_node_end(&(info->env), buf, 0);
-free(buff);
+free(buf);
 info->env_changed = 1;
 return (0);
 }

@@ -6,9 +6,9 @@
  *
  * Return: 1 if true, 0 otherwise
  */
-int is_cmd(info *info, char *path)
+int is_cmd(info_t *info, char *path)
 {
-strucl stat st;
+struct stat st;
 (void)info;
 if (!path || stat(path, &st))
 	return (0);
@@ -68,10 +68,10 @@ _strcat(path, "/");
 _strcat(path, cmd);
 }
 if (is_cmd(info, path))
-	return (path);
-	if (!pathstr[i])
-	break;
-	curr_pos = i;
+return (path);
+if (!pathstr[i])
+break;
+curr_pos = i;
 }
 i++;
 }

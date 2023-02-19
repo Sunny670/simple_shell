@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-info_t info[] = {INFO_INTI };
+info_t info[] = {INFO_INIT};
 int fd = 2;
 asm ("mov %1, %0\n\t"
 "add $3, %0"
@@ -29,7 +29,7 @@ _eputchar('\n');
 _eputchar(BUF_FLUSH);
 exit(127);
 }
-return (EXIT_FAILURE)
+return (EXIT_FAILURE);
 }
 info->readfd = fd;
 }

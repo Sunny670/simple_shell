@@ -34,17 +34,18 @@ free(a);
  *
  * Return: pointer to da ol'block nameen.
  */
-void *_realloc(void  *ptr, unsigned int old_size, unsinged int new_size)
+void *_realloc(void  *ptr, unsigned int old_size, unsigned int new_size)
 {
 char *p;
 if (!ptr)
 	return (malloc(new_size));
 if (!new_size)
 	return (free(ptr), NULL);
-if (new_size == old_size
+if (new_size == old_size)
 		return (ptr);
-		p = malloc(new_size);
-		if (!p)
+
+	p = malloc(new_size);
+	if (!p)
 		return (NULL);
 
 	old_size = old_size < new_size ? old_size : new_size;
@@ -53,4 +54,3 @@ if (new_size == old_size
 	free(ptr);
 	return (p);
 }
-

@@ -22,11 +22,11 @@ if (r != -1)
 set_info(info, av);
 builtin_ret = find_builtin(info);
 if (builtin_ret == -1)
-	fint_cmd(info);
+	find_cmd(info);
 }
 else if (interactive(info))
-	_putchar('\n');
-	free_info(info, 0);
+_putchar('\n');
+free_info(info, 0);
 }
 write_history(info);
 free_info(info, 1);
